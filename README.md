@@ -30,9 +30,7 @@ Line 7: print("My boss is stupid, and I feel lazy after my lunch break.")
 To install the linter in your environment:
 
 ```bash
-git clone https://github.com/amshamah419/Karen-Inspect
-cd karen-inspect
-pip install .
+pip install karen-inspect
 ```
 
 ### Usage
