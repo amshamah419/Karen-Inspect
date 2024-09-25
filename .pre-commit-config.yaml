@@ -1,0 +1,5 @@
+repos:
+-   repo: https://github.com/amshamah419/Karen-Inspect
+    rev: v0.1.0
+    hooks:
+    -   id: karen-inspect

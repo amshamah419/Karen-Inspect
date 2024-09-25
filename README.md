@@ -33,6 +33,34 @@ To install the linter in your environment:
 pip install karen-inspect
 ```
 
+### Running Karen Inspect as a Pre-Commit Hook
+
+You can integrate **Karen Inspect** with Git to automatically lint your Python code before committing by adding it as a pre-commit hook.
+
+1. Install **pre-commit** if you haven’t already:
+
+    ```bash
+    pip install pre-commit
+    ```
+
+2. Add the following to your `.pre-commit-config.yaml`:
+
+    ```yaml
+    repos:
+    -   repo: https://github.com/amshamah419/Karen-Inspect
+        rev: v0.1.0
+        hooks:
+        -   id: karen-inspect
+    ```
+
+3. Install the pre-commit hook:
+
+    ```bash
+    pre-commit install
+    ```
+
+4. Now, every time you make a commit, **Karen Inspect** will automatically check your Python files for violations.
+
 ### Usage
 Run the linter from the command line, specifying the Python file you want to inspect:
 

@@ -1,0 +1,7 @@
+-   id: karen-inspect
+    name: Karen Inspect
+    description: This linter checks for 'naughty' words and non-inclusive language in Python code.
+    entry: karen-inspect
+    language: python
+    types: [python]
+    files: \.py$
