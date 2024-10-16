@@ -48,18 +48,19 @@ class HRLinter:
 
 
 @click.command()
-@click.argument('filepath', type=click.Path(exists=True))
-def main(filepath):
+@click.argument('filepaths', type=click.Path(exists=True), nargs=-1)
+def main(filepaths):
     """
     Lint the provided Python file for 'naughty' words and fire-able offenses.
     """
-    if not os.path.isfile(filepath):
-        click.echo(f"{filepath} is not a valid file.")
-        sys.exit(1)
+    for filepath in filepaths:
+        if not os.path.isfile(filepath):
+            click.echo(f"{filepath} is not a valid file.")
+            sys.exit(1)
 
-    linter = HRLinter(filepath)
-    linter.lint()
-    linter.report()
+        linter = HRLinter(filepath)
+        linter.lint()
+        linter.report()
 
 
 if __name__ == "__main__":
