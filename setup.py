@@ -14,7 +14,7 @@ setup(
         ],
     },
     description='A Python linter that flags "naughty" words and non-inclusive language to ensure code is HR compliant',
-    long_description=open('README.md').read(),
+    long_description=open('README.md', encoding='utf-8').read(),
     long_description_content_type='text/markdown',
     author='Amichai Shamah',
     author_email='amshamah@gmail.com',
